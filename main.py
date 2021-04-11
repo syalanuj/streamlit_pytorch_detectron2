@@ -1,9 +1,14 @@
 import streamlit as st
-import torch,torchvision
+# import torch,torchvision
 # import req
 from detectron2.utils.logger import setup_logger
 import numpy as np
 import os, json, cv2, random
+from detectron2 import model_zoo
+from detectron2.engine import DefaultPredictor
+from detectron2.config import get_cfg
+from detectron2.utils.visualizer import Visualizer
+from detectron2.data import MetadataCatalog, DatasetCatalog
 
 # print(torch.__version__, torch.cuda.is_available())
 # assert torch.__version__.startswith("1.8")
@@ -15,11 +20,7 @@ st.write('Detectron2 is Facebook AI Researchs next generation software system th
 st.image('assets/img.png')
 
 # import some common detectron2 utilities
-from detectron2 import model_zoo
-from detectron2.engine import DefaultPredictor
-from detectron2.config import get_cfg
-from detectron2.utils.visualizer import Visualizer
-from detectron2.data import MetadataCatalog, DatasetCatalog
+
 st.write('\n')
 
 st.title('Testing the Zoo Model')
