@@ -1,5 +1,5 @@
 import streamlit as st
-# import torch,torchvision
+import torch,torchvision
 # import req
 from detectron2.utils.logger import setup_logger
 import numpy as np
